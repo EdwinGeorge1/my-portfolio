@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <PageWrapper>
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+        
         {/* LEFT SECTION */}
         <div>
           <h1 className="text-5xl font-extrabold text-gray-900 leading-tight">
@@ -17,9 +18,9 @@ export default function Home() {
 
           <div className="mt-8 flex gap-4">
 
-            {/* ✅ Download Resume Works on GitHub Pages */}
+            {/* ✅ Corrected Download Resume for GitHub Pages */}
             <a
-              href="/Edwin_George.pdf"
+              href="/my-portfolio/Edwin_George.pdf"
               download="Edwin_George_Resume.pdf"
               className="px-6 py-3 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 transition font-medium"
             >
