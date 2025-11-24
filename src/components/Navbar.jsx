@@ -33,6 +33,7 @@ export default function Navbar() {
           <NavItem to="/" label="Home" />
           <NavItem to="/projects" label="Projects" />
           <NavItem to="/experience" label="Experience" />
+          <NavItem to="/education" label="Education" />
           <NavItem to="/contact" label="Contact" />
         </nav>
 
@@ -51,6 +52,7 @@ export default function Navbar() {
           <NavItem to="/" label="Home" />
           <NavItem to="/projects" label="Projects" />
           <NavItem to="/experience" label="Experience" />
+          <NavItem to="/education" label="Education" />
           <NavItem to="/contact" label="Contact" />
         </div>
       )}

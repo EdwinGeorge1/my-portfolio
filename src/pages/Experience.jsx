@@ -6,6 +6,7 @@ const EXPERIENCE_LIST = [
     company: "Alphadroid",
     role: "Robotics Engineer Intern",
     date: "Jan – Apr 2025",
+    logo: "/my-portfolio/alphadroid.png",
     details: [
       "Developed and trained deep learning models for pose estimation, object detection, classification, and segmentation for advanced robotic perception.",
       "Optimized computer vision pipelines for real-time inference and integrated them with robotic control systems.",
@@ -20,6 +21,7 @@ const EXPERIENCE_LIST = [
     company: "UST",
     role: "Robotics Engineer Intern",
     date: "Jan – Apr 2024",
+    logo: "/my-portfolio/ust.png",
     details: [
       "Contributed to the development of a mecanum-wheel autonomous mobile robot using ROS2.",
       "Performed hardware testing and system validation to ensure reliable performance.",
@@ -34,6 +36,7 @@ const EXPERIENCE_LIST = [
     company: "Asimov Robotics",
     role: "Robotics Engineer Intern",
     date: "May – Jun 2023",
+    logo: "/my-portfolio/asimov.png",
     details: [
       "Developed an auto-docking system for mobile robots using ROS1.",
       "Designed an IR-based docking mechanism for precise alignment and efficient charging.",
@@ -57,11 +60,23 @@ export default function Experience() {
               key={e.company}
               className="p-6 bg-white border rounded-lg shadow-sm hover:shadow transition"
             >
-              <h4 className="text-xl font-semibold text-gray-800">{e.company}</h4>
-              <p className="text-sm text-gray-500">{e.date}</p>
-              <p className="mt-2 font-medium text-gray-700">{e.role}</p>
+              {/* Company Logo + Info */}
+              <div className="flex items-center gap-4">
+                <img
+                  src={e.logo}
+                  alt={e.company}
+                  className="w-14 h-14 object-contain rounded-md border bg-white p-2"
+                />
 
-              <ul className="mt-3 list-disc pl-6 text-gray-600 text-sm space-y-1">
+                <div>
+                  <h4 className="text-xl font-semibold text-gray-800">{e.company}</h4>
+                  <p className="text-sm text-gray-500">{e.date}</p>
+                  <p className="mt-1 font-medium text-gray-700">{e.role}</p>
+                </div>
+              </div>
+
+              {/* Bullet Points */}
+              <ul className="mt-4 list-disc pl-6 text-gray-600 text-sm space-y-1">
                 {e.details.map((point, index) => (
                   <li key={index}>{point}</li>
                 ))}
