@@ -2,28 +2,53 @@ import React from "react";
 import PageWrapper from "../components/PageWrapper";
 
 const PROJECT_LIST = [
-  {
-    title: "6D Object Pose Estimation",
-    desc: "Real-time object pose estimation using YOLO + depth fusion.",
-    tech: ["YOLO", "Open3D", "Depth"],
-  },
+  
+
+  // ⭐ Autonomous Mobile Robot
   {
     title: "Autonomous Mobile Robot",
-    desc: "SLAM + Nav2 navigation + MPPI planning for warehouse AMR.",
+    desc: "SLAM + Nav2 navigation with MPPI planner for warehouse-ready AMR.",
     tech: ["SLAM", "Nav2", "MPPI"],
+    gif: "video.gif", 
   },
+
+  // ⭐ ESP32 Micro-ROS Robot
   {
     title: "ESP32 Micro-ROS Robot",
-    desc: "Encoder odometry, PID motor control, TF broadcasting.",
+    desc: "Differential drive robot with encoders, PID motor control, odometry, and TF broadcasting.",
     tech: ["Micro-ROS", "PID", "ESP32"],
   },
 
-  // ⭐ NEW PROJECT ADDED
+  // ⭐ Arduino Bluetooth Robot
   {
     title: "Arduino Bluetooth Robot Control (HC-06)",
-    desc: "Built a Bluetooth-controlled robot using Arduino and the HC-06 module. Implemented wireless communication, motor control, and a mobile app interface.",
-    tech: ["Arduino", "HC-06", "Bluetooth", "Motor Control", "Embedded"],
+    desc: "Bluetooth-controlled robot using Arduino, HC-06, and a custom motor control interface.",
+    tech: ["Arduino", "HC-06", "Bluetooth"],
     video: "https://www.youtube.com/embed/gt3Cq_xmqzc",
+  },
+
+  // ⭐ Mobile Robot Control UI
+  {
+    title: "Mobile Robot Control System",
+    desc: "Full-stack robot teleoperation UI using React + FastAPI with real-time ROS2 telemetry via WebSockets.",
+    tech: ["React", "FastAPI", "ROS2", "WebSocket"],
+    gif: "ui.gif", // public/ui.gif
+  },
+
+  // ⭐ Pick-and-Place Using ArUco (xArm Lite6)
+  {
+    title: "Pick-and-Place Using ArUco (xArm Lite6)",
+    desc: "Gazebo + MoveIt2 simulation of xArm Lite6 with RealSense-based ArUco detection and automated attach/detach pick-and-place.",
+    tech: ["ROS2", "MoveIt2", "Gazebo", "ArUco", "xArm"],
+    gif: "ihub.gif", // public/ihub.gif
+  },
+
+  // ⭐ NEW: Blender Synthetic 3D Data Generator
+  {
+    title: "Synthetic 3D Data Generation (Blender + Gazebo)",
+    desc: "Automated pipeline to wrap 2D images onto 3D models in Blender and auto-generate Gazebo SDF models for simulation datasets.",
+    tech: ["Blender", "Python", "Gazebo", "SDF", "3D Modelling"],
+    gif: "data3d.gif", // public/data3d.gif
   },
 ];
 
@@ -55,7 +80,7 @@ export default function Projects() {
                 ))}
               </div>
 
-              {/* VIDEO EMBED (if exists) */}
+              {/* VIDEO */}
               {p.video && (
                 <div className="w-full aspect-video rounded-lg overflow-hidden border mt-4">
                   <iframe
@@ -65,6 +90,17 @@ export default function Projects() {
                     frameBorder="0"
                     allowFullScreen
                   ></iframe>
+                </div>
+              )}
+
+              {/* GIF */}
+              {p.gif && (
+                <div className="w-full rounded-lg overflow-hidden border mt-4">
+                  <img
+                    src={import.meta.env.BASE_URL + p.gif}
+                    alt={p.title}
+                    className="w-full h-auto object-cover"
+                  />
                 </div>
               )}
             </div>
