@@ -3,6 +3,18 @@ import PageWrapper from "../components/PageWrapper";
 
 const EXPERIENCE_LIST = [
   {
+    company: "Transasia Bio-Medicals Ltd.",
+    role: "Application Software Engineer ",
+    date: "Dec 2025 – Present",
+    logo: "/my-portfolio/Transasia",
+    details: [
+      "Integrated and managed six robot joints within a high-level robot control software framework for medical robotic systems.",
+      "Designed and implemented real-time motor control and feedback loops using encoder data for precision medical robotics.",
+      "Developed multithreaded C++ modules for synchronized robot motion and sensor processing in medical robotic platforms.",
+      "Collaborated with hardware and vision teams to debug, optimize, and validate medical robotic subsystems."
+    ],
+  },
+  {
     company: "Alphadroid",
     role: "Robotics Engineer Intern",
     date: "Jan – Apr 2025",
